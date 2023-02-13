@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8B62E437-DFCE-4F64-8A43-AB6090C8D8D6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "temp-service", "temp-service", "{3205B6C9-0DC0-46B0-AC4B-657A2F701F97}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TempApi", "TempApi\TempApi.csproj", "{376A2E48-0ED5-47B4-B58B-FC7937264DB0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "humid-service", "humid-service", "{3E4F4FA0-8BCA-49F6-A77A-25826C59A042}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HumidApi", "HumidApi\HumidApi.csproj", "{F7344687-154C-4D88-9802-88C3576A8BB4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "aggregator-service", "aggregator-service", "{62A98480-17D4-4A72-8A33-77272857E74A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AggregatorApi", "AggregatorApi\AggregatorApi.csproj", "{7DEF9D5C-D99C-4784-9A90-029408B48404}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{376A2E48-0ED5-47B4-B58B-FC7937264DB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{376A2E48-0ED5-47B4-B58B-FC7937264DB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{376A2E48-0ED5-47B4-B58B-FC7937264DB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{376A2E48-0ED5-47B4-B58B-FC7937264DB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7344687-154C-4D88-9802-88C3576A8BB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7344687-154C-4D88-9802-88C3576A8BB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7344687-154C-4D88-9802-88C3576A8BB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7344687-154C-4D88-9802-88C3576A8BB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DEF9D5C-D99C-4784-9A90-029408B48404}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DEF9D5C-D99C-4784-9A90-029408B48404}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DEF9D5C-D99C-4784-9A90-029408B48404}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DEF9D5C-D99C-4784-9A90-029408B48404}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3205B6C9-0DC0-46B0-AC4B-657A2F701F97} = {8B62E437-DFCE-4F64-8A43-AB6090C8D8D6}
+		{376A2E48-0ED5-47B4-B58B-FC7937264DB0} = {3205B6C9-0DC0-46B0-AC4B-657A2F701F97}
+		{3E4F4FA0-8BCA-49F6-A77A-25826C59A042} = {8B62E437-DFCE-4F64-8A43-AB6090C8D8D6}
+		{F7344687-154C-4D88-9802-88C3576A8BB4} = {3E4F4FA0-8BCA-49F6-A77A-25826C59A042}
+		{62A98480-17D4-4A72-8A33-77272857E74A} = {8B62E437-DFCE-4F64-8A43-AB6090C8D8D6}
+		{7DEF9D5C-D99C-4784-9A90-029408B48404} = {62A98480-17D4-4A72-8A33-77272857E74A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4B43D0DB-60BB-46E8-89CD-FD1082665B7A}
+	EndGlobalSection
+EndGlobal
