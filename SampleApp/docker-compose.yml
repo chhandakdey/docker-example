@@ -1,0 +1,28 @@
+version: '3.4'
+
+services:
+  
+  temp-api:
+    image: temp-api
+    build:
+      context: .
+      dockerfile: TempApi/Dockerfile
+    ports:
+      - "8081:80"
+      
+  humid-api:
+    image: humid-api
+    build:
+      context: .
+      dockerfile: HumidApi/Dockerfile
+
+  aggregator-api:
+    image: aggregator-api
+    build:
+      context: .
+      dockerfile: AggregatorApi/Dockerfile
+    ports:
+      - "8080:80"
+    depends_on:
+      - temp-api
+      - humid-api
