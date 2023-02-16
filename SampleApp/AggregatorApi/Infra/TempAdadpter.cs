@@ -17,6 +17,7 @@ namespace AggregatorApi.Infra
 
         public async Task<int> GetResult()
         {
+            var resultData = -1000;
             var tempApiURL = _configuration.GetValue<string>("TempApiURL");
             var httpResponseMessage = await _httpClient.GetAsync(tempApiURL);
 
@@ -25,11 +26,11 @@ namespace AggregatorApi.Infra
                 using var contentStream =
                     await httpResponseMessage.Content.ReadAsStreamAsync();
 
-                await JsonSerializer.DeserializeAsync
-                    <int>(contentStream);
+                resultData = await JsonSerializer.DeserializeAsync
+                    <int>(contentStream);                
             }
 
-            return -1000;
+            return resultData;
         }
     }
 }

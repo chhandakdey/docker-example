@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace AggregatorApi.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/weather")]
     [ApiController]
     public class HttpAggregatorController : ControllerBase
     {
@@ -17,7 +17,7 @@ namespace AggregatorApi.Controllers
             _humidHttpAdapter = humidHttpAdapter;
         }
 
-        [HttpGet(Name = "GetWeather")]
+        [HttpGet]
         public string Get()
         {
             var tempTask = _tempHttpAdapter.GetResult();

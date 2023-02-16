@@ -7,14 +7,16 @@ services:
     build:
       context: .
       dockerfile: TempApi/Dockerfile
-    ports:
-      - "8081:80"
+    networks:
+      - sample-net
       
   humid-api:
     image: humid-api
     build:
       context: .
       dockerfile: HumidApi/Dockerfile
+    networks:
+      - sample-net
 
   aggregator-api:
     image: aggregator-api
@@ -26,3 +28,8 @@ services:
     depends_on:
       - temp-api
       - humid-api
+    networks:
+      - sample-net
+  
+networks:
+  sample-net:

@@ -7,7 +7,7 @@ namespace TempApi.Controllers
     [ApiController]
     public class TempController : ControllerBase
     {
-        [HttpGet(Name = "GetTemp")]
+        [HttpGet]
         public int Get()
         {
             return new Random().Next(40);

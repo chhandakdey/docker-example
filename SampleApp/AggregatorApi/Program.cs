@@ -10,11 +10,11 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddHttpClient("TempApi", httpClient =>
 {
-    httpClient.BaseAddress = new Uri("https://temp-api/");    
+    httpClient.BaseAddress = new Uri("http://temp-api/");    
 });
 builder.Services.AddHttpClient("HumidApi", httpClient =>
 {
-    httpClient.BaseAddress = new Uri("https://humid-api/");
+    httpClient.BaseAddress = new Uri("http://humid-api/");
 });
 
 builder.Services.AddScoped<ITempHttpAdapter, TempAdadpter>();
@@ -29,7 +29,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 
 app.UseAuthorization();
 

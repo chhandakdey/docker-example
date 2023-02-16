@@ -7,7 +7,7 @@ namespace HumidApi.Controllers
     [ApiController]
     public class HumidController : ControllerBase
     {
-        [HttpGet(Name = "GetHumid")]
+        [HttpGet]
         public int Get()
         {
             return new Random().Next(100);
