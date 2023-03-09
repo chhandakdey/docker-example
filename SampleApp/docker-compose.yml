@@ -9,6 +9,13 @@ services:
       dockerfile: TempApi/Dockerfile
     networks:
       - sample-net
+    deploy:
+      replicas: 2
+      update_config:
+        parallelism: 1
+        delay: 10s
+      restart_policy:
+        condition: on-failure
       
   humid-api:
     image: humid-api
@@ -17,6 +24,13 @@ services:
       dockerfile: HumidApi/Dockerfile
     networks:
       - sample-net
+    deploy:
+      replicas: 1
+      update_config:
+        parallelism: 1
+        delay: 10s
+      restart_policy:
+        condition: on-failure
 
   aggregator-api:
     image: aggregator-api
@@ -30,6 +44,13 @@ services:
       - humid-api
     networks:
       - sample-net
+    deploy:
+      replicas: 1
+      update_config:
+        parallelism: 1
+        delay: 10s
+      restart_policy:
+        condition: on-failure
   
 networks:
   sample-net:
